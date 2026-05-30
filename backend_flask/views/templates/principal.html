@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Principal - TechStore S.A.C.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="topbar">
+        <h2>TechStore S.A.C.</h2>
+        <a href="{{ url_for('web_bp.web_salir') }}">Cerrar sesión</a>
+    </nav>
+
+    <main class="container">
+        <section class="panel">
+            <h1>Bienvenido, {{ username }}</h1>
+            <p>Panel principal del backend Flask con arquitectura MVC.</p>
+
+            <div class="actions">
+                <a class="button" href="{{ url_for('web_bp.web_productos') }}">
+                    Gestionar productos
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

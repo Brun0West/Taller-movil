@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - TechStore S.A.C.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-body">
+    <main class="login-card">
+        <h1>TechStore S.A.C.</h1>
+        <p>Acceso al panel de administración</p>
+
+        {% if error %}
+            <div class="alert">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST">
+            <label>Usuario</label>
+            <input type="text" name="username" placeholder="Ingrese usuario" required>
+
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="Ingrese contraseña" required>
+
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <small>Usuario de prueba: admin / admin123</small>
+    </main>
+</body>
+</html>
